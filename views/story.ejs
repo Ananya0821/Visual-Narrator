@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Storybook</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Storybook</h1>
+        <div class="badge">Style: <%= story.style %></div>
+
+        <h2>Scenes</h2>
+        <div class="panels-wrapper">
+            <% story.panels.forEach(function(panel, index) { %>
+                <div class="panel">
+                    <h3>Scene <%= index + 1 %></h3>
+                    <p><strong>Caption:</strong> <%= panel.caption %></p>
+                    <p><strong>Mini-story:</strong> <%= panel.mini_story %></p>
+                </div>
+            <% }) %>
+        </div>
+
+        <div class="full-story">
+            <h2>Full Story</h2>
+            <p><%= story.global_story %></p>
+        </div>
+
+        <a href="/" class="back-link">Back to upload</a>
+    </div>
+</body>
+</html>
