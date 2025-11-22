@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visual Narrator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Visual Narrator</h1>
+        <p class="subtitle">Upload your photos and let AI weave them into a connected story.</p>
+
+        <form action="/generate" method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <label>Select images</label>
+                <input type="file" name="images" multiple required>
+            </div>
+
+            <div class="input-group">
+                <label>Select Story Style</label>
+                <select name="style">
+                    <option value="Wholesome Diary">Wholesome Diary</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Romantic">Romantic</option>
+                    <option value="Kids Story">Kids Story</option>
+                </select>
+            </div>
+
+            <button type="submit">Generate Story</button>
+        </form>
+    </div>
+</body>
+</html>
